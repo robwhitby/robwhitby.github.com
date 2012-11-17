@@ -5,10 +5,10 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>XQueryHacker</title>
- <link href="http://www.xqueryhacker.com/atom.xml" rel="self"/>
- <link href="http://www.xqueryhacker.com/"/>
+ <link href="http://robwhitby.github.com/atom.xml" rel="self"/>
+ <link href="http://robwhitby.github.com/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://www.xqueryhacker.com/</id>
+ <id>http://robwhitby.github.com/</id>
  <author>
    <name>Rob Whitby</name>
  </author>
@@ -16,9 +16,9 @@ layout: nil
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://www.xqueryhacker.com{{ post.url }}"/>
+   <link href="http://robwhitby.github.com{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://www.xqueryhacker.com{{ post.id }}</id>
+   <id>http://robwhitby.github.com{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
