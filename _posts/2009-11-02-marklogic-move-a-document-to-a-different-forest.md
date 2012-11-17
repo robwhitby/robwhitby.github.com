@@ -11,7 +11,7 @@ The technique is to first set the initial forest as delete-only and then re-inse
 
 Here’s the code to move a single document
 
-```xqy
+{% highlight xqy %}
 xquery version '1.0-ml';
 
 declare function local:document-move-forest($uri as xs:string)
@@ -34,7 +34,7 @@ declare function local:document-move-forest($uri as xs:string,
     $forest-ids
   )
 };
-```
+{% endhighlight %}
 
 This will keep the document’s permissions, collections and quality. And the properties document is maintained and moved with it.
 

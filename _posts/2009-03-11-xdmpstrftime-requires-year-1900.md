@@ -10,16 +10,16 @@ tags:
 There’s a weird bug in the `xdmp:strftime()` function in MarkLogic, I  
 think inherited from elsewhere, that causes an error when supplied a year less than 1900.
 
-```xqy
+{% highlight xqy %}
 xdmp:strftime('%Y', xs:dateTime("1890-01-01T00:00:00"))
-```
+{% endhighlight %}
 
     SVC-STRFTIMEYEAR: xdmp:strftime(“%Y”, xs:dateTime(“1890-01-01T00:00:00″)) 
     — Year cannot be formatted: 1890
 
 As a work-around call this function in a custom namespace:
 
-```xqy
+{% highlight xqy %}
 define function strftime($format as xs:string, $dt as xs:dateTime)
 as xs:string
 {
@@ -29,4 +29,4 @@ as xs:string
     fn:string(fn:year-from-date(xs:date($dt)))
   )
 }
-```
+{% endhighlight %}

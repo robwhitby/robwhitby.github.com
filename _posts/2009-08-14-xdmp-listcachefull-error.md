@@ -13,7 +13,7 @@ Googling “LISTCACHEFULL” returns a paltry [1 result][1] – someone asking a
 
 I simplified the query down to the part causing the error:
 
-```xqy
+{% highlight xqy %}
 cts:search(
   fn:doc(),
   cts:element-query(
@@ -21,7 +21,7 @@ cts:search(
     cts:word-query("university of exeter", ("unstemmed"))
   )
 )[1]
-```
+{% endhighlight %}
 
 Nothing really complex about that query – but playing around with it, I found that changing “unstemmed” to “stemmed” fixed it. I have no idea why an unstemmed query causes more trouble than a stemmed query which has much more work to do. Changing to a stemmed query wasn’t an option because that would limit the search to content in one language (see [this post][2] for more details on this weird behaviour).
 

@@ -1,6 +1,6 @@
 ---
 author: Rob
-title: Error restoring a Mark Logic forest
+title: Error restoring a MarkLogic forest
 excerpt:
 layout: post
 ---

@@ -14,7 +14,7 @@ I had to write a new brush for XQuery, but this was pretty straightforward (it h
 
 Here’s an example..
 
-```xqy
+{% highlight xqy %}
 xquery version "1.0-ml";
 declare variable $URI as xs:string external;
 
@@ -37,14 +37,15 @@ let $xml :=
   <xml att="blah" att2="blah">
     sdasd**asdasd**
   </xml>
-```
+{% endhighlight %}
 
 If you want to use it download [SyntaxHighlighter][2], and then get the XQuery brush files from GitHub:  
 <http://github.com/robwhitby/SyntaxHighlighter-XQueryBrush>
 
 Example usage:
 
-```html
+
+{% highlight html %}
 <script type="text/javascript" src="scripts/shCore.js"></script>
 <script type="text/javascript" src="scripts/shBrushXQuery.js"></script>
 <link type="text/css" rel="stylesheet" href="styles/shCore.css"/>
@@ -56,7 +57,7 @@ Example usage:
 </script>
 
 <pre class="brush: xquery;">xquery version "1.0-ml";</pre>
-```    
+{% endhighlight %}    
 
 Next job is to change the layout of this blog to make the content column wider...
 

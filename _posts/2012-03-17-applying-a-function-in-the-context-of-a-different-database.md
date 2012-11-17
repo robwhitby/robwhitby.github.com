@@ -9,10 +9,10 @@ As far as I know there are two ways to access a different database from xquery â
 
 So it would be really useful if you could also call a specific function directly. One way to do this would be if `xdmp:apply` accepted the same options node:
 
-```xqy
+{% highlight xqy %}
 xdmp:apply(
   $function,
   <options xmlns="xdmp:eval"><database>{xdmp:database("another-db")}</options>,
   $params
 )
-```
+{% endhighlight %}

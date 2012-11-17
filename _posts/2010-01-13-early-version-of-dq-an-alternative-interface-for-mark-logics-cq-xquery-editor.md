@@ -1,6 +1,6 @@
 ---
 author: Rob
-title: "Early version of DQ - an alternative interface for Mark Logic's CQ XQuery editor"
+title: "Early version of DQ - an alternative interface for MarkLogic's CQ XQuery editor"
 excerpt:
 layout: post
 ---
@@ -10,7 +10,7 @@ Update: The project has now moved to github.
 
 [DQ v0.2 now available][1]
 
-Here’s a very early version of a new interface to [CQ][2] that I’m slowly working on, imaginatively named [DQ][3]. It aims to address a number of shortcomings in CQ, the web XQuery interface provided by [Mark Logic][4].
+Here’s a very early version of a new interface to [CQ][2] that I’m slowly working on, imaginatively named [DQ][3]. It aims to address a number of shortcomings in CQ, the web XQuery interface provided by [MarkLogic][4].
 
 **Current features**  
 Tabbed code editor (based on [EditArea][5]) with XQuery syntax highlighting, search and replace, and support of tab key  

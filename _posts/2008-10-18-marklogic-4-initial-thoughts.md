@@ -15,12 +15,12 @@ ML 4 now supports XQuery 1.0, but automatically sets existing app servers to use
 *   I had an xquery file which imported a module which i wasn’t actually using, and it had a syntax error in it. In 3.2 this didn’t cause any problems but in 4.0 it threw an exception. Makes sense, and it’s my fault I know but it’s a difference none the less..
 *   Another issue arguably caused by my slack programming… When specifying the return type of a function, if the function actually returns a different type ML 4.0 now enforces a conversion to the type specified. e.g.
 
-```xqy
+{% highlight xqy %}
 declare function get-title() as xs:string {
     <title>the <b>title</b></title>
 };
 <x>{getTitle()}</x>
-```    
+{% endhighlight %}    
 
 returns..
 

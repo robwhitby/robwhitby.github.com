@@ -11,21 +11,22 @@ It turns out that setting a cts:query to be stemmed or unstemmed has a nasty sid
 
 And here’s the problem: In MarkLogic, stemmed queries only search content in one language.
 
-```xqy
+{% highlight xqy %}
   cts:search(
     fn:doc(),
     cts:word-query("chicken", "unstemmed")
   )
-```
+{% endhighlight %}
 
 This will search for the word ‘chicken’ in all documents, regardless of language.
 
-```xqy
+{% highlight xqy %}
 cts:search(
   fn:doc(),
   cts:word-query("chicken", "stemmed")
 )
-```
+{% endhighlight %}
+
 This will search for stems of the word ‘chicken’ in documents of the **database default language only**.
 
 I was shocked by this, turns out all my searches were omitting the 10% or so of documents not in English! I wrongly presumed that all content would be searched but stemming would only have an effect in english content.
@@ -36,7 +37,7 @@ So what do you do if you need to use stemming but also want to search content ac
 
 2. Modify all stemmed queries to an or query – stemmed or unstemmed.
 
-```xqy
+{% highlight xqy %}
 cts:search(
   fn:doc(),
   cts:or-query(
@@ -44,7 +45,7 @@ cts:search(
     cts:word-query('chicken', 'unstemmed')
   )
 )
-```
+{% endhighlight %}
 
 This searches en documents with stemming, and then all documents without stemming. It will incur a performance hit, as the query is more complex. How bad will depend on your content, index settings etc. On my database the impact was negligible.
 

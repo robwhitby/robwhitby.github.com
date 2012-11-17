@@ -9,7 +9,7 @@ I may be blind and all this was for nothing, but I couldn’t find an easy way t
 
 So I wrote this little function:
 
-```xqy
+{% highlight xqy %}
 declare function local:format-int($i as xs:int) as xs:string
 {
   let $input :=
@@ -31,14 +31,14 @@ declare function local:format-int($i as xs:int) as xs:string
     fn:codepoints-to-string(fn:reverse($chars))
   )
 };
-```
+{% endhighlight %}
 
 tests:
 
-```xqy
+{% highlight xqy %}
 local:format-int((1, 12, 123, 1234, 12345, 123456, 1234567,
     123456789, 1234567890, -12, -12345, -1234567))
-```
+{% endhighlight %}
 
 (By the way, I think that’s the first time I’ve found a use for function mapping)
 
