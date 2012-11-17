@@ -1,8 +1,24 @@
-<html>
-<head>
-<title>Rob Whitby</title>
-<meta http-equiv="refresh" content="0; url=http://resume.github.com/?robwhitby">
-</head>
-<body>
-<p><a href="http://github.com/robwhitby">github.com/robwhitby</a></p>
-</body>
+---
+layout: default
+title: XQueryHacker
+---
+
+<article>
+  <h2>
+    <a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a>
+    <date>{{ site.posts.first.date | date_to_string }}</date>
+  </h2>
+  {{ site.posts.first.content }}
+</article>
+
+<h2>Previous Posts</h2>
+<ol reversed>
+  {% for post in site.posts offset:1 %}
+    <li>
+      <h3>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <date>{{ post.date | date_to_string }}</date>
+      </h3>
+    </li>
+  {% endfor %}
+</ol>
