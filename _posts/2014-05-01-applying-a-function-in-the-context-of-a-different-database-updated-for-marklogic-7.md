@@ -10,20 +10,20 @@ A couple of years ago I wrote about how useful it would be to [apply a function 
 
 {% highlight xqy %}
 xdmp:invoke-function(
-   function() { xdmp:document-insert("doc",$content), xdmp:commit() },
-   <options xmlns="xdmp:eval"><database>{xdmp:database("another-db")}</options>
-)
-
-
-xdmp:spawn-function(
-   function() { xdmp:document-insert("doc",$content), xdmp:commit() },
+   function() { xdmp:document-insert("doc", $content), xdmp:commit() },
    <options xmlns="xdmp:eval"><database>{xdmp:database("another-db")}</options>
 )
 {% endhighlight %}
 
-Spawn differs from invoke in that the function will be executed asynchronously on the task server.
+{% highlight xqy %}
+xdmp:spawn-function(
+   $fn,
+   <options xmlns="xdmp:eval"><database>{xdmp:database("another-db")}</options>
+)
+{% endhighlight %}
 
-The documentation explains the details better than I could [xdmp:invoke-function][docsinvokefn], [xdmp:spawn-function][docsspawnfn]. And check out [taskbot][taskbot] for a great example of these new functions in action.
+
+The documentation explains the details better than I could: [xdmp:invoke-function][docsinvokefn], [xdmp:spawn-function][docsspawnfn]. And check out [taskbot][taskbot] for a great example of these new functions in action.
 
 
 [originalpost]: /2012/03/17/applying-a-function-in-the-context-of-a-different-database.html
