@@ -36,6 +36,12 @@ header {
   height: 68px;
 }
 
+header a {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 section {
   background-color: #fff;
 }
