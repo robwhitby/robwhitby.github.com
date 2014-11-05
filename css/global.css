@@ -36,7 +36,7 @@ header {
   height: 68px;
 }
 
-header a {
+header div {
   position: absolute;
   top: 20px;
   right: 20px;
