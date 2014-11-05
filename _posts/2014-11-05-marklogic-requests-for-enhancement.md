@@ -1,6 +1,6 @@
 ---
 author: Rob
-title: Some ideas for MarkLogic enhancements
+title: MarkLogic enhancements
 excerpt:
 layout: post
 ---
