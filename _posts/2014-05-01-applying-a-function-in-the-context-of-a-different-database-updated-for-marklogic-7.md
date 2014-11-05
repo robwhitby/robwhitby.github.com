@@ -6,7 +6,7 @@ layout: post
 ---
 
 
-A couple of years ago I wrote about how useful it would be to [apply a function in the contect of a different database][originalpost]. At that time there were two choices - eval a string or invoke a main module. But things have changed since then, in MarkLogic 7 there are a  couple of new functions:
+A couple of years ago I wrote about how useful it would be to [apply a function in the context of a different database][originalpost]. At that time there were two choices - eval a string or invoke a main module. But things have changed since then, in MarkLogic 7 there are a couple of new functions:
 
 {% highlight xqy %}
 xdmp:invoke-function(
