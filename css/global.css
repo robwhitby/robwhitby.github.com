@@ -27,22 +27,22 @@ header, section {
   position: relative;
   clear: left;
   width: 900px;
-  margin: auto;
-  padding: 30px 40px;
+  margin: 0 auto;
 }
 
-header {
-  background-color: #fff;
-  height: 68px;
+#links {
+  list-style-type: none;
+  margin: 0;
+  text-align: right;
 }
 
-header div {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+#links li {
+  display: inline;
+  margin-left: 20px;
 }
 
 section {
+  padding: 30px 40px;
   background-color: #fff;
 }
 
